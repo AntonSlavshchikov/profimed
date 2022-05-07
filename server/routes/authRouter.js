@@ -9,5 +9,6 @@ router.post('/login', [
     check('password', 'Не верный пароль!').notEmpty(),
 ], authController.login);
 router.get('/check', authMidddleweare ,authController.check);
+router.post('/create', authController.createUser);
 
 module.exports = router;

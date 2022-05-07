@@ -5,7 +5,10 @@ class ReviewsController {
     async getAll(req, res) {
         let reviews = await Reviews.findAll({
             limit: 5,
-            offset: req.query.limit
+            offset: req.query.limit,
+            order: [
+                ['id','DESC'],
+            ]
         });
 
         return res.json(reviews);
