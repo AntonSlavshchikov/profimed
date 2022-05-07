@@ -1,0 +1,54 @@
+.intro{
+    width: 100%;
+    height: 100vh;
+
+    background: url('./assets/Home/banner.jpeg') no-repeat;
+    background-size: cover;
+}
+
+.intro__inner{
+    height: 100%;
+    width: 50%;
+
+    display: flex;
+    align-items: center;
+}
+
+.intro__sup__title{
+    font-family: $exo;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 90%;
+    color: #898989;
+
+    letter-spacing: 0.135em;
+
+    text-transform: uppercase;
+}
+
+.intro__title{
+    font-family: $exo;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 70px;
+    line-height: 90%;
+    color: $black;
+
+    letter-spacing: 0.135em;
+
+    text-transform: uppercase;
+
+    margin-top: 20px;
+}
+
+.intro__text{
+    font-family: $exo;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 22px;
+    color: #313131;
+
+    margin-top: 20px;
+}

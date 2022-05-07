@@ -1,0 +1,17 @@
+.block-home{
+    margin-top: 80px
+}
+
+@media (max-width: $breakpoint_xxl){
+    .block-home{
+        margin-top: 50px
+    }
+}
+/*Основа*/
+@import './intro/intro';
+@import './homeServices/homeServices';
+@import './homeForm/homeForm';
+/*Медиа*/
+@import './intro/intro-media';
+@import './homeServices/homeServices-media';
+@import './homeForm/homeForm-media';

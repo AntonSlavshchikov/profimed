@@ -1,0 +1,23 @@
+@media (max-width:$breakpoint_md){
+    .home__form{
+        margin-top: 40px;
+    }
+
+    .home__form__inner{
+        width: 100%;
+    }
+
+    .home__form__title{
+        margin-top: 80px;
+    
+        font-size: 24px;
+    }
+    
+    .home__form__text{
+        font-family: $exo;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 1.7;
+        color: #666666;
+    }
+} 

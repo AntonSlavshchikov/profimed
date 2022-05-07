@@ -1,0 +1,36 @@
+.home__form{
+    margin-top: 80px;
+
+    width: 100%;
+    min-height: 680px;
+
+    background: url('./assets/Home/homeform.png') no-repeat;
+    background-size: cover;
+
+    display: flex;
+    align-items: center;
+}
+
+.home__form__inner{
+    height: 100%;
+    width: 50%;
+}
+
+.home__form__title{
+    margin-top: 100px;
+
+    font-family: $exo;
+    font-size: 28px;
+    line-height: 33px;
+    display: flex;
+    color: #313131;
+    font-weight: bold;
+}
+
+.home__form__text{
+    font-family: $exo;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.7;
+    color: #666666;
+}

@@ -1,0 +1,25 @@
+@media (max-width:$breakpoint_md){
+    .services {
+        margin-top: 25px;
+    }
+
+    .servicrs__title{
+        font-size: 20px;
+    }
+
+    .services__text{
+        font-size: 20px;
+    
+    }
+} 
+
+@media (max-width:$breakpoint_sm){
+    .servicrs__title{
+        font-size: 16px;
+    }
+
+    .services__text{
+        font-size: 16px;
+    
+    }
+} 

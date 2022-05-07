@@ -1,0 +1,39 @@
+.vacancy__list{
+    width: 100%;
+}
+
+.vacancy__item{
+    margin-top: 20px;
+
+    background-color: darken($white, 5%);
+
+    border-radius: 15px;
+    padding: 15px;
+
+    box-shadow: 0 0 3px;
+}
+
+.vacancy__title{
+    font-family: $exo;
+    font-weight: 700;
+    font-size: 20px;
+    text-transform: uppercase;
+
+    text-align: center;
+}
+
+.vacancy__text{
+    font-family: $exo;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    color: #313131;
+
+    white-space: pre-line;
+}
+
+.vacancy__info{
+    font-weight: 700;
+    color: #03A3A2;
+}

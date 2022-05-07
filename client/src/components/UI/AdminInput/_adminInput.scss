@@ -1,0 +1,26 @@
+.admin__iput{
+    width: 100%;
+    height: 45px;
+    background: #FFFFFF;
+    border-radius: 10px;
+    outline: none;
+    border: 1px solid #333;
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+    padding-left: 20px;
+    font-size: 14px;
+    line-height: 16px;
+    color: #333;
+    font-weight: 600;
+}
+
+.admin__file-title{
+    display: block;
+    width: 100%;
+}
+
+.admin__iput-file {
+    border: none;
+    padding-left: 0;
+}

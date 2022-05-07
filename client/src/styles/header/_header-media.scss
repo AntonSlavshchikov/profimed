@@ -1,0 +1,48 @@
+@media (max-width:$breakpoint_xxl){
+    .nav{
+        background-color: #EAF7F7;
+    }
+
+    .top__menu{
+        display: none;
+        width: 100%;
+
+        position: absolute;
+        top: 100%;
+        left: 0;
+        height: 100vh;
+
+        background-color: #EAF7F7;
+    }
+
+    .top__menu.active{
+        display: block;
+    }
+
+    .nav__link{
+        display: block;
+
+        margin: 15px 0;
+        height: auto;
+    }
+
+    .sup__header{
+        display: none;
+    }
+
+    .nav-toggle{
+        display: block;
+    }
+
+    .header__img{
+        max-width: 170px;
+    }
+
+    .nav__about{
+        display: none;
+    }
+
+    .nav__mob{
+        display: block!important;
+    }
+}   

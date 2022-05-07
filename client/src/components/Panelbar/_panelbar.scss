@@ -1,0 +1,38 @@
+.panelbar{
+    height: 100vh;
+    width: 20%;
+    background-color: #000;
+
+    position: fixed;
+    left: 0;
+}
+
+.panelbar__link{
+    font-family: $robot;
+    font-size: 18px;
+    color: $white;
+    font-weight: 700;
+
+    width: 100%;
+    display: block;
+
+    padding: 8px 10px;
+
+    text-decoration: none;
+
+    transition: all .2 linear;
+
+    &:hover{
+        color: #000;
+        background-color: $white;
+    }
+
+    &.active{
+        background-color: $white;
+        color: #000;
+    }
+}
+
+.test{
+    margin-left: 22%;
+}

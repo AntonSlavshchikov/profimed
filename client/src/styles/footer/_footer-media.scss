@@ -1,0 +1,30 @@
+@media (max-width:$breakpoint_xl){
+    .footer__name{
+        font-size: 14px;
+    }
+} 
+
+@media (max-width:$breakpoint_md){
+    .footer__content{
+        align-items: center;
+        flex-wrap: wrap;
+        flex: none;
+
+        width: 100%;
+    }
+
+    .footer__item{
+        width: 100%;
+    }
+} 
+
+@media (max-width:$breakpoint_sm){
+    .footer__content{
+        display: block;
+        width: 100%;
+    }
+
+    .footer__item{
+        width: 100%;
+    }
+} 

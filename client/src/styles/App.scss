@@ -1,0 +1,250 @@
+/*Импорт переменных и шрифтов*/
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@300;400;700&family=Roboto:wght@300;500;700&display=swap');
+@import './vars';
+
+/*Обнуление*/
+body,html{
+    margin: 0;
+    height: 100%;
+}
+
+::-webkit-scrollbar{
+    width: 10px;
+}
+
+::-webkit-scrollbar-track{
+    background: #f0f0f0;
+}
+
+::-webkit-scrollbar-thumb{
+    background-color: #b4b4b4;
+    border-radius: 20px;
+    border: 3px solid #f0f0f0;
+}
+
+h1,h2,h3,h4,h5,h6{
+    margin: 0;
+}
+
+*,
+*::after,
+*::before{
+    box-sizing: border-box;
+}
+
+/*Глобальные стили*/
+hr {
+    border: 0;
+    height: 1px;
+    background: #89898946;
+    margin: 0;
+    margin-top: 30px;
+}
+
+#root{
+    height: 100%;
+}
+
+.page{
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+}
+
+.main{
+    width: 100%;
+    flex: 1 0 auto;
+}
+
+.container{
+    display: block;
+    position: relative;
+
+    padding: 0 15px;
+    max-width: 1230px;
+    width: 100%;
+    height: 100%;
+
+    margin: 0 auto;
+}
+
+.reg__button{
+    background: none;
+
+    font-family: $exo;
+    font-weight: 700;
+    font-size: 16px;
+    color: #03a3a2;
+
+    padding: 8px 10px;
+
+    border-radius: 5px;
+    border: 1px solid #03a3a2;
+
+    transition: all .2s linear;
+
+    text-decoration: none;
+
+    margin-left: 10px;
+
+    &:hover{
+        background-color: #03a3a2;
+        color: $white;
+    }
+}
+
+.block{
+    margin-top: 110px;
+}
+
+.block__title{
+    font-family: $robot;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 50px;
+    line-height: 90%;
+    color: $white;
+    letter-spacing: 0.135em;
+    text-transform: uppercase;    
+
+    
+   -webkit-text-stroke-width: 2px;
+   -webkit-text-stroke-color: $primary_color;
+}
+
+
+/*Админка*/
+.block-admin{
+    margin-left: 21%;
+    margin-top: 8px;
+}
+
+.block-admin__title{
+    font-family: $robot;
+    font-size: 24px;
+    font-weight: 700;
+    color: transparent;
+    text-transform: uppercase;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #000;
+}
+
+.block-admin__header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.block-admin__link{
+    font-family: $robot;
+    color: #000;
+    font-size: 14px;
+    text-transform: uppercase;
+    text-decoration: none;
+
+    &:hover{
+        text-decoration: underline;
+    }
+}
+
+.admin__list{
+    width: 100%;
+    margin-top: 10px;
+
+    height: 80vh;
+
+    overflow-y: auto;
+}
+
+.admin__list::-webkit-scrollbar {
+    width: 10px;
+    background-color: #f9f9fd;
+}
+  
+.admin__list::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: #333;
+}
+  
+.admin__list::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.2);
+    border-radius: 10px;
+    background-color: #f9f9fd;
+}
+
+.admin__edit{
+    width: 100%;
+    height: 80vh;
+    overflow-y: auto;
+}
+
+.admin__edit::-webkit-scrollbar {
+    width: 10px;
+    background-color: #f9f9fd;
+}
+  
+.admin__edit::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: #333;
+}
+  
+.admin__edit::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.2);
+    border-radius: 10px;
+    background-color: #f9f9fd;
+}
+
+@media (max-width: $breakpoint_xxl){
+    .block {
+        margin-top: 70px;
+    }
+
+   .block__title{
+       font-size: 30px;
+   } 
+}
+
+/*Компоненты*/
+@import '../components/UI/Input/myInput';
+@import '../components/UI/AdminInput/adminInput';
+@import '../components/UI/AdminSelect/admin-select';
+@import '../components/UI/AdminTextArea/adminTextarea';
+@import '../components/UI/Button/myButton';
+@import '../components/UI/AdminButton/adminButton';
+@import '../components/UI/Loader/loader';
+@import '../components/ListEmpty/list-empty';
+@import '../components/Panelbar/panelbar';
+@import '../components/NotFound/notFound';
+@import '../components/UI/AdminLoader/adminLoader';
+
+@import './admin/admin';
+
+/*Основные стили*/
+@import './header/header';
+@import './header/header-admin';
+
+/*Page*/
+@import './home/home';
+@import './news/news';
+@import './services/services';
+@import './documents/documents';
+@import './workers/workers';
+@import './workerInfo/worker';
+@import './about/about';
+@import './reviews/reviews';
+@import './vacancy/vacancy';
+@import './auth/auth';
+
+@import './footer/footer';
+
+/*Media*/
+@import './header/header-media';
+@import './news/news-media';
+@import './services/services-media';
+@import './workers/workers-media';
+@import './workerInfo/worker-media';
+@import './reviews/reviews-media';
+@import './vacancy/vacancy-media';
+@import './about/about-media';
+
+@import './footer/footer-media';

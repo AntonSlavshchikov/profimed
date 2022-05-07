@@ -1,0 +1,30 @@
+@media (max-width:$breakpoint_md){
+    .news__content{
+        display: block;
+    }
+
+    .news__header{
+        display: block;
+    }
+
+    .news__block{
+        margin-left: 0;
+    }
+
+    .news__img{
+        display: block;
+        margin: 0 auto 20px;
+    }
+
+    .news__title{
+        font-size: 20px;
+
+        &:last-child{
+            margin-top: 10px;
+        }
+    }
+
+    .news__text{
+        font-size: 16px;
+    }
+} 

@@ -1,0 +1,21 @@
+.worker-info__img{
+    display: block;
+
+    max-width: 300px;
+    width: 100%;
+    margin: 20px auto 0;
+}
+
+.worker-info__title{
+    font-family: $exo;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 22px;
+    color: #313131;
+}
+
+.worker-info__data{
+    font-weight: 700;
+    color: #03A3A2;
+}

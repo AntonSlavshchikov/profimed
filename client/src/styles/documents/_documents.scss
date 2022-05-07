@@ -1,0 +1,50 @@
+.document__list{
+    width: 100%;
+}
+
+.document__item{
+    margin-top: 20px;
+}
+
+.document__title{
+    font-family: $exo;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 18px;
+    line-height: 90%;
+    color: $primary_color;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.document__text{
+    margin: 0;
+    font-family: $exo;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 18px;
+    color: #313131;
+    text-align: justify;
+
+    white-space: pre-line;
+}
+
+.document__link{
+    display: block;
+    width: 100%;
+    font-family: $exo;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 16px;
+    line-height: 90%;
+    color: #be1e5a;
+    margin-top: 10px;
+    text-decoration: none;
+
+    background-color: #EAF7F7;
+    padding: 8px;
+
+    &:hover{
+        text-decoration: underline;
+    }
+}

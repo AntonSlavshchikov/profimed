@@ -1,0 +1,22 @@
+.list__empty{
+    display: block;
+    margin: 150px auto;
+
+    width: 150px;
+
+    text-align: center;
+}
+
+.empty__text{
+    font-family: $exo;
+    font-size: 18px;
+    font-weight: 300;
+    color: darken($white, 30%);
+
+}
+
+.empty__icon{
+    font-size: 35px;
+    font-weight: 300;
+    color: darken($white, 30%);
+}

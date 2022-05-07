@@ -1,0 +1,49 @@
+.footer{
+    margin-top: 100px;
+    flex: 0 0 auto;
+}
+
+.footer__info{
+    width: 100%;
+}
+
+.footer__content{
+    display: flex;
+    justify-content: space-between;
+    flex: 1 1 0;
+}
+
+.footer__img{
+    max-width: 280px;
+    width: 100%;
+}
+
+.footer__name{
+    display: block;
+    font-family: $exo;
+    font-size: 16px;
+    color: #313131;
+    margin-top: 8px;
+
+}
+
+.footer__inner{
+    width: 100%;
+
+    background-color: #313131;
+
+    margin-top: 50px;
+    text-align: center;
+
+    padding: 20px 0;
+}
+
+.footer__text{
+    display: block;
+    color: $white;
+    font-size: 14px;
+    font-weight: 300;
+    font-family: $exo;
+
+    margin: 0;
+}

@@ -1,0 +1,54 @@
+.admin__item{
+    padding: 5px 10px;
+    border-bottom: 1px solid #333;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+.admin__title{
+    font-family: $robot;
+    font-size: 15px;
+    color: #000;
+    font-weight: 300;
+}
+
+.admin__group{
+    display: flex;
+}
+
+.admin__btn{
+    background: $primary_color;
+    border: none;
+    margin-right: 10px;
+
+    font-size: 14px;
+    color: $white;
+
+    padding: 8px 10px;
+
+    transition: all .2s linear;
+
+    &:hover{
+        background: darken($primary_color, 10%);
+    }
+
+    &:last-child{
+        border: none;
+        background: #be1e5a;
+
+        color: $white;
+        margin-right: 0;
+
+        &:hover{
+            background: darken(#be1e5a, 10%);
+        }
+    }
+}
+
+.admin__img{
+    max-width: 500px;
+    width: 100%;
+}
