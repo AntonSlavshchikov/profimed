@@ -28,7 +28,7 @@ export const NewsList = () => {
       ) : (
         <ListEmpty />
       )}
-      {news.length > 5 && (
+      {news.length > 4 && (
         <div className="news__btn">
           <MyButton onClick={() => getNews()}>Загрузить еще</MyButton>{" "}
         </div>

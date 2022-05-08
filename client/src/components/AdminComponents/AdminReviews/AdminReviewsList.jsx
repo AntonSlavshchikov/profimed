@@ -40,7 +40,7 @@ export const AdminReviewsList = () => {
           </div>
         </div>
       ))}
-      {reviews.length > 5 && <AdminButton onClick={() => getReviews()}>Загрузить еще</AdminButton>}
+      {reviews.length > 4 && <AdminButton onClick={() => getReviews()}>Загрузить еще</AdminButton>}
     </div>
   );
 };

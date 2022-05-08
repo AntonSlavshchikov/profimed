@@ -14,19 +14,19 @@ const Admin = () => {
 
   useEffect(() => {
     check().then((data) => {
-      console.log(data);
+      dispatch(setUser(true));
     });
 
-    if (JSON.parse(window.localStorage.getItem("user")) === true) {
+    /* if (JSON.parse(window.localStorage.getItem("user")) === true) {
       dispatch(setUser(JSON.parse(window.localStorage.getItem("user"))));
-    }
+    } */
   }, []);
 
-  useEffect(() => {
+  /*   useEffect(() => {
     if (user === true) {
       window.localStorage.setItem("user", user);
     }
-  }, [user]);
+  }, [user]); */
 
   return <section className="page">{user ? <AdminContent /> : <NotFound />}</section>;
 };

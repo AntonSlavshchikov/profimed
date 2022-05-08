@@ -23,7 +23,7 @@ export const ReviewsList = () => {
       ) : (
         <ListEmpty />
       )}
-      {reviews.length > 5 && (
+      {reviews.length > 4 && (
         <div className="news__btn">
           <MyButton onClick={() => getReviews()}>Загрузить еще</MyButton>{" "}
         </div>

@@ -40,7 +40,7 @@ export const AdminNewsList = () => {
           </div>
         </div>
       ))}
-      {news.length > 5 && <AdminButton onClick={() => getNews()}>Загрузить еще</AdminButton>}
+      {news.length > 4 && <AdminButton onClick={() => getNews()}>Загрузить еще</AdminButton>}
     </div>
   );
 };
