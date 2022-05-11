@@ -1,5 +1,5 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
-import { newsList } from "../../http/newsAPI";
+import { newsList, newsCount } from "../../http/newsAPI";
 
 export const fetchNews = createAsyncThunk(
     'news/fetchNews',
@@ -13,6 +13,7 @@ export const newsSlice = createSlice({
     name:'news',
     initialState: {
         news: [],
+        count: 0,
         status: null,
         error: null,
     },
@@ -20,6 +21,7 @@ export const newsSlice = createSlice({
         removeNews: (state, action) => {
             state.news = state.news.filter(n => n.id !== action.payload);
         },
+
     },
     extraReducers: {
         [fetchNews.pending]: (state) => {

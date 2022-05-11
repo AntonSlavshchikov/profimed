@@ -19,6 +19,11 @@ export const newsGetById = async (news) => {
     return data;
 }
 
+export const newsCount = async () => {
+    const data = await $host.get('api/news/count');
+    return data;
+}
+
 export const createNews = async (news) => {
     await $host.post('api/news', news);
 }

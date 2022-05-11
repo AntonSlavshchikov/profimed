@@ -7,7 +7,6 @@ const ApiError = require('../error/ApiError');
 class NewsController {
     // Получить список новостей
     async getAll(req, res) {
-        console.log(req.query);
         let news = await News.findAll({
             limit: 5,
             offset: req.query.limit,
@@ -22,6 +21,11 @@ class NewsController {
         let news = await News.findByPk(req.query.news);
 
         return res.json(news);
+    }
+
+    async getCountNews(req, res){
+        let count = await News.count();
+        return res.json(count);
     }
 
     // Создать новость
