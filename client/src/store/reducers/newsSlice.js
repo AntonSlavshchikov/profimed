@@ -14,6 +14,7 @@ export const newsSlice = createSlice({
     initialState: {
         news: [],
         count: 0,
+        count: 0,
         status: null,
         error: null,
     },
@@ -21,7 +22,9 @@ export const newsSlice = createSlice({
         removeNews: (state, action) => {
             state.news = state.news.filter(n => n.id !== action.payload);
         },
-
+        addNewsCount: (state, action) => {
+            state.count = action.payload;
+        }
     },
     extraReducers: {
         [fetchNews.pending]: (state) => {
@@ -36,6 +39,14 @@ export const newsSlice = createSlice({
     },
 });
 
-export const { removeNews } = newsSlice.actions;
+export const { removeNews, addNewsCount } = newsSlice.actions;
 
 export default newsSlice.reducer;
+
+export const fetchCountNews = () => {
+    return async dispatch => {
+        const response = await newsCount();
+        dispatch(addNewsCount(response.data));
+    }
+   
+}

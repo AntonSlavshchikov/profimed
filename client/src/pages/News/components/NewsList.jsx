@@ -11,13 +11,17 @@ export const NewsList = () => {
   const [isLoading, setIsLoading] = useState(false);
 
   const news = useSelector((state) => state.news.news);
+  const countNews = useSelector((state) => state.news.count);
+  console.log(countNews);
   const dispatch = useDispatch();
 
   const getNews = () => {
-    setIsLoading(true);
-    setCount(count + 5);
-    dispatch(fetchNews(count));
-    setIsLoading(false);
+    if (count <= countNews) {
+      setIsLoading(true);
+      setCount(count + 5);
+      dispatch(fetchNews(count));
+      setIsLoading(false);
+    }
   };
 
   return (
@@ -28,7 +32,7 @@ export const NewsList = () => {
       ) : (
         <ListEmpty />
       )}
-      {news.length > 4 && (
+      {countNews > 5 && (
         <div className="news__btn">
           <MyButton onClick={() => getNews()}>Загрузить еще</MyButton>{" "}
         </div>

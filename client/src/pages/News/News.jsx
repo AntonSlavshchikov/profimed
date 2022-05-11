@@ -1,5 +1,5 @@
 import { useDispatch, useSelector } from "react-redux";
-import { fetchNews } from "../../store/reducers/newsSlice";
+import { addNewsCount, fetchCountNews, fetchNews } from "../../store/reducers/newsSlice";
 import { useEffect, useState } from "react";
 import { NewsList } from "./components/NewsList";
 import { Loader } from "../../components/UI/Loader/Loader";
@@ -13,6 +13,7 @@ export const News = () => {
     if (news.length === 0) {
       setIsLoading(true);
       dispatch(fetchNews(0));
+      dispatch(fetchCountNews());
       setTimeout(() => {
         setIsLoading(false);
       }, 1000);
