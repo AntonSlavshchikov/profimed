@@ -1,5 +1,5 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
-import { reviewsList } from "../../http/reviewsAPI";
+import { reviewsList, reviewsCount } from "../../http/reviewsAPI";
 
 export const fetchReviews = createAsyncThunk(
     'reviews/fetchReviews',
@@ -13,12 +13,16 @@ export const reviewsSlice = createSlice({
     name:'reviews',
     initialState: {
         reviews: [],
+        count: 0,
         status: null,
         error: null,
     },
     reducers:{
         removeReview: (state, action) => {
             state.reviews = state.reviews.filter(n => n.id !== action.payload);
+        },
+        addCountReviews: (state, action) => {
+            state.count = action.payload;
         }
     },
     extraReducers: {
@@ -34,6 +38,13 @@ export const reviewsSlice = createSlice({
     },
 });
 
-export const { removeReview } = reviewsSlice.actions;
+export const { removeReview, addCountReviews } = reviewsSlice.actions;
 
 export default reviewsSlice.reducer;
+
+export const fetchCountReviews = () =>{
+    return async dispatch => {
+        const responce = await reviewsCount();
+        return dispatch(addCountReviews(responce.data));
+    }
+}

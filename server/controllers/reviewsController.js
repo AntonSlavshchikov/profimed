@@ -20,10 +20,14 @@ class ReviewsController {
         return res.json(reviews);
     }
 
+    async getCountReviews(req, res){
+        let count = await Reviews.count();
+        return res.json(count);
+    }
+
     async createReview(req, res, next) {
         try {
-            console.log(req.body.data);
-            const { fio, text, date } = req.body.data;
+            const { fio, text, date } = req.body;
             const reviews = await Reviews.create({ fio, text, date });
             return res.json(reviews)
 

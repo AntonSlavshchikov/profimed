@@ -19,15 +19,14 @@ export const reviewGetById = async (review) => {
     return data;
 }
 
-export const createReview = async (fio, text) => {
-    console.log("TUT");
-    await $host.post('api/reviews',{
-        data: {
-            fio: fio,
-            text: text,
-            date: new Date()
-        }
-    });
+export const reviewsCount = async () => {
+    const data = await $host.get('api/reviews/count');
+    return data;
+}
+
+export const createReview = async (review) => {
+    console.log("🚀 ~ review", review)
+    await $host.post('api/reviews', review);
 }
 
 export const editReview = async (review) => {

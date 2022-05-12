@@ -12,15 +12,16 @@ export const NewsList = () => {
 
   const news = useSelector((state) => state.news.news);
   const countNews = useSelector((state) => state.news.count);
-  console.log(countNews);
   const dispatch = useDispatch();
 
   const getNews = () => {
     if (count <= countNews) {
-      setIsLoading(true);
-      setCount(count + 5);
-      dispatch(fetchNews(count));
-      setIsLoading(false);
+      if (news.length !== countNews) {
+        setIsLoading(true);
+        setCount(count + 5);
+        dispatch(fetchNews(count));
+        setIsLoading(false);
+      }
     }
   };
 

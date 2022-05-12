@@ -8,12 +8,17 @@ import { ListEmpty } from "../../../components/ListEmpty/ListEmpty";
 export const ReviewsList = () => {
   const reviews = useSelector((state) => state.reviews.reviews);
   const [count, setCount] = useState(5);
+  const countReviews = useSelector((state) => state.reviews.count);
 
   const dispatch = useDispatch();
 
   const getReviews = () => {
-    setCount(count + 5);
-    dispatch(fetchReviews(count));
+    if (count <= countReviews) {
+      if (reviews.length !== countReviews) {
+        setCount(count + 5);
+        dispatch(fetchReviews(count));
+      }
+    }
   };
 
   return (
@@ -23,7 +28,7 @@ export const ReviewsList = () => {
       ) : (
         <ListEmpty />
       )}
-      {reviews.length > 4 && (
+      {countReviews > 5 && (
         <div className="news__btn">
           <MyButton onClick={() => getReviews()}>Загрузить еще</MyButton>{" "}
         </div>
