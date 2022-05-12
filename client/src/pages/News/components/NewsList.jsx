@@ -33,7 +33,7 @@ export const NewsList = () => {
       ) : (
         <ListEmpty />
       )}
-      {countNews > 5 && (
+      {countNews > 5 && news && (
         <div className="news__btn">
           <MyButton onClick={() => getNews()}>Загрузить еще</MyButton>{" "}
         </div>
