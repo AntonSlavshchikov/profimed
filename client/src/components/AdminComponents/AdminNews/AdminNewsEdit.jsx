@@ -4,16 +4,17 @@ import { AdminInput } from "../../UI/AdminInput/AdminInput";
 import { AdminTextArea } from "../../UI/AdminTextArea/AdminTextArea";
 import { newsGetById, editNews } from "../../../http/newsAPI";
 import { useParams } from "react-router-dom";
-import { AdminLoader } from "../../UI/AdminLoader/AdminLoader";
+import { useDispatch } from "react-redux";
+import { loaderPage } from "../../../store/reducers/userSlice";
 
 export const AdminNewsEdit = () => {
-  const [isLoading, setIsLoading] = useState(false);
   const [id, setId] = useState(0);
   const [title, setTitle] = useState("");
   const [text, setText] = useState("");
   const [file, setFile] = useState("");
   const [img, setImg] = useState("");
   const params = useParams();
+  const dispatch = useDispatch();
 
   const selectFile = (e) => {
     setFile(e.target.files[0]);
@@ -31,7 +32,7 @@ export const AdminNewsEdit = () => {
 
   const updateNews = (e) => {
     e.preventDefault();
-    setIsLoading(true);
+    dispatch(loaderPage(true));
     const formData = new FormData();
     formData.append("id", id);
     formData.append("title", title);
@@ -42,13 +43,12 @@ export const AdminNewsEdit = () => {
 
     editNews(formData).then(() => {
       window.location.reload(true);
-      setIsLoading(false);
+      dispatch(loaderPage(false));
     });
   };
 
   return (
     <div className="block-admin">
-      {isLoading && <AdminLoader />}
       <div className="container">
         <div className="block__header">
           <h3 className="block-admin__title">Изменить новость</h3>

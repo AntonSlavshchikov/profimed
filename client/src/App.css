@@ -438,8 +438,8 @@ hr {
 }
 
 .admin__loader__fone {
-  min-height: 92%;
-  width: 78%;
+  min-height: 100%;
+  width: 100%;
   background: rgba(255, 255, 255, 0.541);
   z-index: 99999;
   position: absolute;

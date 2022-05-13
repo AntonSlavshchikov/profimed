@@ -14,7 +14,6 @@ export const newsSlice = createSlice({
     initialState: {
         news: [],
         count: 0,
-        count: 0,
         status: null,
         error: null,
     },
@@ -24,7 +23,7 @@ export const newsSlice = createSlice({
         },
         addNewsCount: (state, action) => {
             state.count = action.payload;
-        }
+        },
     },
     extraReducers: {
         [fetchNews.pending]: (state) => {
