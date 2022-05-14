@@ -16,7 +16,7 @@ export const serviceGetById = async (service) => {
 }
 
 export const createService = async (service) => {
-    await $host.post('api/services', service);
+    return await $host.post('api/services', service);
 }
 
 export const updateService = async (service) => {

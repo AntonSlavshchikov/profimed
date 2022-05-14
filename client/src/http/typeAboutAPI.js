@@ -16,7 +16,7 @@ export const typeAboutGetById = async (typeAbout) => {
 }
 
 export const createTypeAbout = async (typeAbout) => {
-    await $host.post('api/typeAbout', typeAbout);
+    return await $host.post('api/typeAbout', typeAbout);
 }
 
 export const updateTypeAbout = async (typeAbout) => {

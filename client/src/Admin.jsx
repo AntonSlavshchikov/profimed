@@ -2,10 +2,9 @@ import { AdminContent } from "./components/AdminContent/AdminContent";
 import { useDispatch, useSelector } from "react-redux";
 import { NotFound } from "./components/NotFound/NotFound";
 import { loaderPage, setUser } from "./store/reducers/userSlice";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { check } from "./http/userAPI";
 import { AdminLoader } from "./components/UI/AdminLoader/AdminLoader";
-import { loaderNews } from "./store/reducers/newsSlice";
 
 const Admin = () => {
   const user = useSelector((state) => state.user.user);

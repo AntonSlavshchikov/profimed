@@ -16,7 +16,7 @@ export const workersGetById = async (worker) => {
 }
 
 export const createWorker = async (worker) => {
-    await $host.post('api/workers', worker);
+    return await $host.post('api/workers', worker);
 }
 
 export const updateWorker = async (worker) => {

@@ -16,7 +16,7 @@ export const licensesGetById = async (licenses) => {
 }
 
 export const createLicenses = async (licenses) => {
-    await $host.post('api/licenses', licenses);
+    return await $host.post('api/licenses', licenses);
 }
 
 export const updateLicenses = async (licenses) => {

@@ -16,7 +16,7 @@ export const typeServicesGetById = async (typeService) => {
 }
 
 export const createTypeServices = async (typeService) => {
-    await $host.post('api/typeServices', typeService);
+    return await $host.post('api/typeServices', typeService);
 }
 
 export const updateTypeServices = async (typeAbout) => {

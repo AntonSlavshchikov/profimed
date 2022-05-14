@@ -16,7 +16,7 @@ export const aboutGetById = async (about) => {
 }
 
 export const createAbout = async (about) => {
-    await $host.post('api/about', about);
+    return await $host.post('api/about', about);
 }
 
 export const updateAbout = async (about) => {

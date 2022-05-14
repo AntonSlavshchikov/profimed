@@ -16,7 +16,7 @@ export const vacancyGetById = async (vacancy) => {
 }
 
 export const createVacancy = async (vacancy) => {
-    await $host.post('api/vacancy', vacancy);
+    return await $host.post('api/vacancy', vacancy);
 }
 
 export const editVacancy = async (vacancy) => {

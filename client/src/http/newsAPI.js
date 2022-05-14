@@ -25,11 +25,10 @@ export const newsCount = async () => {
 }
 
 export const createNews = async (news) => {
-    await $host.post('api/news', news);
+    return await $host.post('api/news', news);
 }
 
 export const editNews = async (news) => {
-    console.log("OK")
     return await $host.post('api/news/update', news);
 }
 

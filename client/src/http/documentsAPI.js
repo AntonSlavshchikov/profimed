@@ -16,11 +16,11 @@ export const documentGetById = async (document) => {
 }
 
 export const createDocuments = async (document) => {
-    await $host.post('api/documents', document);
+    return await $host.post('api/documents', document);
 }
 
 export const editDocument = async (document) => {
-    await $host.post('api/documents/update', document);
+    return await $host.post('api/documents/update', document);
 }
 
 export const documentDelete = async (id) => {

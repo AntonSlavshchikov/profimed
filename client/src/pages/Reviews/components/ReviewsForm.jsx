@@ -3,6 +3,7 @@ import { MyButton } from "../../../components/UI/Button/MyButton";
 import { createReview } from "../../../http/reviewsAPI";
 
 import { useState } from "react";
+import { useDispatch } from "react-redux";
 
 export const ReviewForm = () => {
   const [titleReview, setTitleReview] = useState("");
@@ -13,12 +14,15 @@ export const ReviewForm = () => {
     document.getElementById("reviewBtn").classList.toggle("review-btn");
   };
 
-  const newReview = () => {
+  const newReview = (e) => {
+    e.preventDefault();
     const formData = new FormData();
     formData.append("fio", titleReview);
     formData.append("text", textReview);
     formData.append("date", new Date());
-    createReview(formData);
+    createReview(formData).then(() => {
+      window.location.reload(true);
+    });
   };
 
   return (
@@ -26,7 +30,7 @@ export const ReviewForm = () => {
       <MyButton onClick={openForm} id="reviewBtn">
         Написать отзыв
       </MyButton>
-      <form className="review__form" id="reviewForm" onSubmit={newReview}>
+      <form className="review__form" id="reviewForm" onSubmit={(e) => newReview(e)}>
         <MyInput
           placeholder="ФИО"
           value={titleReview}

@@ -26,7 +26,7 @@ export const reviewsCount = async () => {
 
 export const createReview = async (review) => {
     console.log("🚀 ~ review", review)
-    await $host.post('api/reviews', review);
+    return await $host.post('api/reviews', review);
 }
 
 export const editReview = async (review) => {
