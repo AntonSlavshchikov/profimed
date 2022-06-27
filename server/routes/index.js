@@ -12,6 +12,7 @@ const about = require('./aboutRouter');
 const typeAbout = require('./typeAboutRouter');
 const licenses = require('./licensesRouter');
 const auth = require('./authRouter');
+const appForm = require('./applicationFormRouter');
 
 router.use('/news', newsRouter);
 router.use('/workers', workersRouter);
@@ -24,5 +25,6 @@ router.use('/about', about);
 router.use('/typeAbout', typeAbout);
 router.use('/licenses', licenses);
 router.use('/auth', auth);
+router.use('/appForm', appForm);
 
 module.exports = router;

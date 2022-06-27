@@ -10,6 +10,7 @@ import aboutReducer from "./reducers/aboutSlice";
 import typeAboutReducer from "./reducers/typeAboutSlice";
 import licensesReducer from "./reducers/licensesSlice";
 import userReducer from "./reducers/userSlice";
+import appFormReducer from "./reducers/appFormSlice";
 
 export const store = configureStore({
   reducer: {
@@ -24,5 +25,6 @@ export const store = configureStore({
       typeAbout: typeAboutReducer,
       licenses: licensesReducer,
       user: userReducer,
+      appForm: appFormReducer,
   },
 })

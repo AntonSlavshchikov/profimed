@@ -78,6 +78,13 @@ const User = sequelize.define('users',{
     password : {type: DataTypes.STRING, allowNull: false},
 });
 
+const ApplicationForm = sequelize.define('applicationform', {
+    id : {type: DataTypes.INTEGER, primaryKey: true, autoIncrement: true},
+    fio : {type: DataTypes.TEXT,   allowNull: false},
+    numberPhone: {type: DataTypes.STRING, allowNull: false},
+    mark: {type: DataTypes.BOOLEAN, allowNull: true},
+})
+
 TypeService.hasMany(Services);
 Services.belongsTo(TypeService);
 
@@ -85,5 +92,5 @@ TypeAbout.hasMany(About);
 About.belongsTo(TypeAbout);
 
 module.exports = {
-    News, Workers, TypeService, Services, Reviews, Vacancy, Documents, TypeAbout, About, Licenses, User
+    News, Workers, TypeService, Services, Reviews, Vacancy, Documents, TypeAbout, About, Licenses, User, ApplicationForm
 }
