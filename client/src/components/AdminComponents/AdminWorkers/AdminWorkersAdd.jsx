@@ -78,17 +78,15 @@ export const AdminWorkersAdd = () => {
           />
           <AdminInput
             type="text"
-            placeholder="Заслуги"
+            placeholder="Заслуги *Необязательное поле"
             value={progress}
             onChange={(e) => setProgress(e.target.value)}
-            required
           />
           <AdminTextArea
             rows="10"
-            placeholder="Биография"
+            placeholder="Биография *Необязательное поле"
             value={text}
             onChange={(e) => setText(e.target.value)}
-            required
           />
 
           <label for="file">Изображение сотрудника: </label>

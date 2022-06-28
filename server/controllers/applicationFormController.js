@@ -19,8 +19,8 @@ class ApplicationFormController {
     // Создать новость
     async createApplicationForm(req, res, next) {
         try {
-            const { fio, numberPhone, mark } = req.body;
-            const appForm = await ApplicationForm.create({ fio, numberPhone, mark });
+            const { fio, numberPhone, mark, doctor } = req.body;
+            const appForm = await ApplicationForm.create({ fio, numberPhone, mark, doctor:doctor });
             return res.json(appForm)
         } catch (e) {
             console.log(e)

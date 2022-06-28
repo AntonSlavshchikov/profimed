@@ -16,8 +16,8 @@ const Workers = sequelize.define('workers',{
     birthday : {type: DataTypes.DATE, allowNull: false},
     status : {type: DataTypes.TEXT, allowNull: false},
     experience : {type: DataTypes.INTEGER, allowNull: false},
-    progress : {type: DataTypes.TEXT, allowNull: false},
-    biography : {type: DataTypes.TEXT, allowNull: false},
+    progress : {type: DataTypes.TEXT, allowNull: true},
+    biography : {type: DataTypes.TEXT, allowNull: true},
 });
 
 const TypeService = sequelize.define('type_service',{
@@ -83,6 +83,7 @@ const ApplicationForm = sequelize.define('applicationform', {
     fio : {type: DataTypes.TEXT,   allowNull: false},
     numberPhone: {type: DataTypes.STRING, allowNull: false},
     mark: {type: DataTypes.BOOLEAN, allowNull: true},
+    doctor : {type: DataTypes.STRING,   allowNull: true},
 })
 
 TypeService.hasMany(Services);

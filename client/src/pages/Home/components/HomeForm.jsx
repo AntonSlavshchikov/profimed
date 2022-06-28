@@ -2,12 +2,16 @@ import { MyInput } from "../../../components/UI/Input/MyInput";
 import { MyButton } from "../../../components/UI/Button/MyButton";
 import { useState } from "react";
 import { createAppForm } from "../../../http/appFormAPI";
+import { useSelector } from "react-redux";
+import { MySelect } from "../../../components/UI/MySelect/MySelect";
 
 export const HomeForm = () => {
   const [check, setCheck] = useState(false);
   const [disable, setDisable] = useState(true);
   const [fio, setFio] = useState("");
   const [phoneNumber, setPhoneNumber] = useState("");
+  const [selectItem, setSelectItem] = useState("");
+  const workers = useSelector((state) => state.workers.workers);
 
   const handleChange = () => {
     setCheck(!check);
@@ -20,11 +24,13 @@ export const HomeForm = () => {
     formData.append("fio", fio);
     formData.append("numberPhone", phoneNumber);
     formData.append("mark", false);
+    formData.append("doctor", selectItem);
     createAppForm(formData);
 
     setFio("");
     setPhoneNumber("");
     setCheck(!check);
+    setSelectItem("");
     alert("Заявка отправлена!");
   };
 
@@ -51,6 +57,13 @@ export const HomeForm = () => {
               onChange={(e) => setPhoneNumber(e.target.value)}
               required
             />
+            <MySelect value={selectItem} onChange={(e) => setSelectItem(e.target.value)} required>
+              {workers.map((item) => (
+                <option key={item.id} className="my-select__options" value={item.fio}>
+                  {item.fio}
+                </option>
+              ))}
+            </MySelect>
             <div>
               <input type="checkbox" checked={check} onChange={handleChange} />
               <label className="home__form__text">Согласие на обработку персональных данных</label>
