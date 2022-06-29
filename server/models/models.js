@@ -13,7 +13,7 @@ const Workers = sequelize.define('workers',{
     id : {type: DataTypes.INTEGER, primaryKey: true, autoIncrement: true},
     fio : {type: DataTypes.TEXT, allowNull: false},
     image: {type: DataTypes.STRING, allowNull: false},
-    birthday : {type: DataTypes.DATE, allowNull: false},
+    birthday : {type: DataTypes.DATE, allowNull: true},
     status : {type: DataTypes.TEXT, allowNull: false},
     experience : {type: DataTypes.INTEGER, allowNull: false},
     progress : {type: DataTypes.TEXT, allowNull: true},

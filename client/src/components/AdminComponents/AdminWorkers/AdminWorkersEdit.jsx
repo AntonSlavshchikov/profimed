@@ -95,7 +95,6 @@ export const AdminWorkersEdit = () => {
               style={{ width: "20%" }}
               value={date}
               onChange={(e) => setDate(e.target.value)}
-              required
             />
             <AdminInput
               type="text"
