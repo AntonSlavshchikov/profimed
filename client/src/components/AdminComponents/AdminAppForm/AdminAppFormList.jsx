@@ -25,7 +25,7 @@ export const AdminAppFormList = () => {
         <div className="admin__item" key={item.id}>
           <h6 className="admin__title">
             {" "}
-            {item.id}.{item.fio} - {item.numberPhone}. Желаемый врач: {item.doctor}
+            {item.id}.{item.fio} - {item.numberPhone}. Куда: {item.doctor}
           </h6>
           {/* <MyInput
             type="checkbox"

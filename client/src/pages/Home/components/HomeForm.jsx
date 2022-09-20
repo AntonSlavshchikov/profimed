@@ -11,6 +11,7 @@ export const HomeForm = () => {
   const [fio, setFio] = useState("");
   const [phoneNumber, setPhoneNumber] = useState("");
   const [selectItem, setSelectItem] = useState("");
+  const workers = useSelector((state) => state.workers.workers);
   const services = useSelector((state) => state.services.services);
   const typeServices = useSelector((state) => state.typeServices.typeServices);
   const typeDup = typeServices.find((item) => item.title === "Функциональная диагностика");
@@ -61,12 +62,19 @@ export const HomeForm = () => {
             />
             <MySelect value={selectItem} onChange={(e) => setSelectItem(e.target.value)} required>
               {services.map((item) =>
-                item.type === typeDup.id ? (
-                  <option key={item.id} className="my-select__options" value={item.title}>
-                    {item.title}
-                  </option>
+                typeDup ? (
+                  item.type === typeDup.id ? (
+                    <option key={item.id} className="my-select__options" value={item.title}>
+                      {item.title}
+                    </option>
+                  ) : null
                 ) : null
               )}
+              {workers.map((item) => (
+                <option key={item.id} className="my-select__options" value={item.title}>
+                  {item.fio}
+                </option>
+              ))}
             </MySelect>
             <div>
               <input type="checkbox" checked={check} onChange={handleChange} />
